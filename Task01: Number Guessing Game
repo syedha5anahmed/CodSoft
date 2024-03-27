@@ -1,0 +1,36 @@
+CodSoft Internship 
+Task 1: Create a Guess Game in which number is generated automatically and User have to guess it
+Code:
+
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+int main() {
+    srand(time(0));
+
+    int Number = rand() % 10 + 1;
+    int guess;
+    int attempts = 0;
+
+    cout << "Let's Play The Guess Game !\n";
+    cout << "Computer has already selected a Random Number between 1 and 10.\n";
+    cout << "Try to guess it!"<<endl;
+
+    do {
+        cout << "Enter your guess: ";
+        cin >> guess;
+        attempts++;
+
+        if (guess < Number) {
+        cout << "Too low! Try again.";
+        } else if (guess > Number) {
+        cout << "Too high! Try again.";
+        } else {
+        cout << "Congratulations! You guessed the number in " << attempts << " attempts.\n";
+        }
+    } while (guess != Number);
+
+    return 0;
+}
