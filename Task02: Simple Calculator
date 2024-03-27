@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+int main(){
+    double num1,num2;
+    char operation;
+
+    cout<<"Enter Your First Number: "<<endl;
+    cin>>num1;
+    cout<<"Enter Your Second Number: "<<endl;
+    cin>>num2;
+
+    cout<<"Select One Operation From Below; "<<endl;
+    cout<<" '+' For Addition"<<endl;
+    cout<<" '-' For Subtraction"<<endl;
+    cout<<" '*' For Product"<<endl;
+    cout<<" '/' For Division"<<endl;
+    cin>>operation;
+
+    switch(operation){
+
+   case '+':
+    cout<<"The Sum Of The Numbers is: "<<num1+num2<<endl;
+    break;
+   case '-':
+    cout<<"The Subtraction Of The Numbers is: "<<num1-num2<<endl;
+    break;
+     case '*':
+    cout<<"The Product Of The Numbers is: "<<num1*num2<<endl;
+    break;
+     case '/':
+         if(num2==0){
+            cout<<"Math Error!!!, You Have To Use Other Number Than 0"<<endl;
+         }
+         else{
+    cout<<"The Division Of The Numbers is: "<<num1/num2<<endl;
+         }
+    break;
+
+default:
+    cout<<"Incorrect Option"<<endl;
+    cout <<"Choose Options From The Given Menu "<<endl;
+    }
+
+return 0;
+}
